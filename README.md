@@ -1,13 +1,5 @@
-# Flareact Template
+# Flareact Site
 
-Get started with Flareact by installing [Wrangler](https://github.com/cloudflare/wrangler) and running:
+This is the docs site for Flareact. It also happens to be built with Flareact ✨
 
-```bash
-wrangler generate my-project https://github.com/flareact/flareact-template
-```
-
-Next, fill in `account_id` and `name` inside your `wrangler.toml` file.
-
-Finally, run `yarn dev` to see magic happen 🎉
-
-Go edit a page in your `/pages` directory to get started 👍
+[Check it out!](https://flareact.com)

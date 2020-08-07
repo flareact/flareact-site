@@ -1,8 +1,8 @@
 name = "flareact-site"
 type = "webpack"
 account_id = ""
-workers_dev = true
-route = ""
+workers_dev = false
+route = "flareact.com/*"
 zone_id = ""
 webpack_config = "webpack.config.js"
 

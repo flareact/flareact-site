@@ -7,12 +7,34 @@
   "private": true,
   "scripts": {
     "dev": "flareact dev",
-    "deploy": "flareact publish"
+    "deploy": "flareact publish",
+    "lint": "eslint --ext .js",
+    "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\""
   },
   "dependencies": {
     "flareact": "^0.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "tailwindcss": "^1.6.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{html,js,json,md,mdx,yml}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

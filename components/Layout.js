@@ -1,10 +1,13 @@
 import Sidebar from "./Sidebar";
+import Link from "flareact/link";
 
 export default function Layout({ children }) {
   return (
     <div className="h-full flex flex-col">
       <nav className="flex items-center h-16 px-6 fixed inset-x-0 top-0 z-20 border-b bg-white">
-        <a>Flareact</a>
+        <Link href="/">
+          <a>Flareact</a>
+        </Link>
       </nav>
       <div className="flex flex-1 h-full">
         <Sidebar />

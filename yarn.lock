@@ -2737,10 +2737,10 @@ findup-sync@^3.0.0:
     micromatch "^3.0.4"
     resolve-dir "^1.0.1"
 
-flareact@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.0.4.tgz#2de141ef78ce00bd0658557855843745e4fe3df5"
-  integrity sha512-oHahUlMRsOOPj+AeEfgHpuIMd7PJbF8Op7GkTSQGl0W8GDXj1a9vU6cy458ftdORZMc2FSfyqDNLcBBPlZ/7wA==
+flareact@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.0.7.tgz#cc15b1fd941cf0ca84eeed41f1047c92fa218c0d"
+  integrity sha512-mPF0r5RwjtgOjKPhSGBSwOaxSVtiOU0XnOj8L37kp8xazsIsxwJWOczR68nUCzSHHmnfZYlvDcsX25e+hPKW0A==
   dependencies:
     "@babel/core" "^7.11.0"
     "@babel/plugin-transform-runtime" "^7.11.0"

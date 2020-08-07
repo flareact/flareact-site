@@ -12,6 +12,7 @@
     "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\""
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.2.0",
     "flareact": "^0.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

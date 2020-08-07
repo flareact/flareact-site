@@ -20,4 +20,4 @@ export default function About() {
 
 The above page will be served at `site.com/about`.
 
-Next step: Read the [getting started guide](/getting-started).
+Next step: Read the [getting started guide](/docs/getting-started).

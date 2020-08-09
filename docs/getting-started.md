@@ -79,8 +79,14 @@ To preview your Flareact site locally, run `yarn dev` in your terminal.
 
 By default, your site will be available at [http://127.0.0.1:8787/](http://127.0.0.1:8787/).
 
-**Note**: Be sure to fill in your `account_id` in `wrangler.toml`, or to pass it to `yarn dev` as an environment variable:
+**Note**: Be sure to fill in your `account_id` in `wrangler.toml`. You can also pass it to `yarn dev` as an environment variable:
 
 ```bash
 CF_ACCOUNT_ID=youraccountid yarn dev
+```
+
+Or add it to a local `.env` file in your project:
+
+```bash
+CF_ACCOUNT_ID=youraccountid
 ```

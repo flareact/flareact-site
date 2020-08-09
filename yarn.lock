@@ -2551,6 +2551,11 @@ dot-case@^3.0.3:
     no-case "^3.0.3"
     tslib "^1.10.0"
 
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/duplexify/-/duplexify-3.7.1.tgz#2a4df5317f6ccfd91f86d6fd25d8d8a103b88309"
@@ -3096,10 +3101,10 @@ findup-sync@^3.0.0:
     micromatch "^3.0.4"
     resolve-dir "^1.0.1"
 
-flareact@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.0.10.tgz#582ddbbf104ae97679eaabe886c5c1d642a641b4"
-  integrity sha512-pF0By40gGkdAardlLxgTgG4Kg3ATKQB03Gp/ekTp+ilH0SRXG7l/M73lCDMIIDysBE9RKytmk5u3YTJvgJEPZw==
+flareact@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.0.11.tgz#f8c8b9aecbf5adc37b2739faa7771bf0cfa5719b"
+  integrity sha512-KCnei3i2KgLgpXf+X4SmLsh8VIphK/7uuQHtO99GJrL3WQQ4aS4guxKmrlNJa0Y8/LzGm3Zm32FZsiJ5heuEhA==
   dependencies:
     "@babel/core" "^7.11.0"
     "@babel/plugin-transform-runtime" "^7.11.0"
@@ -3113,6 +3118,7 @@ flareact@^0.0.10:
     concurrently "^5.2.0"
     copy-webpack-plugin "^5"
     css-loader "^4.2.1"
+    dotenv "^8.2.0"
     mini-css-extract-plugin "^0.9.0"
     postcss-flexbugs-fixes "^4.2.1"
     postcss-loader "^3.0.0"

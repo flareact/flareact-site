@@ -4,7 +4,7 @@ account_id = ""
 workers_dev = false
 route = "flareact.com/*"
 zone_id = ""
-webpack_config = "webpack.config.js"
+webpack_config = "node_modules/flareact/webpack"
 
 [site]
 bucket = "out"

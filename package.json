@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
-    "flareact": "^0.0.8",
+    "flareact": "^0.0.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "tailwindcss": "^1.6.2"
@@ -23,8 +23,10 @@
     "eslint": "^7.6.0",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "html-loader": "^1.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
+    "markdown-loader": "^5.1.0",
     "prettier": "^2.0.5"
   },
   "husky": {

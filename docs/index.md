@@ -1,6 +1,6 @@
 # Flareact
 
-Flareact is an **edge-side rendered** React library built for [Cloudflare Workers](https://workers.cloudflare.com/).
+Flareact is an **edge-rendered** React framework built for [Cloudflare Workers](https://workers.cloudflare.com/).
 
 It features **file-based page routing** with dynamic page paths and **edge-side data fetching** APIs.
 

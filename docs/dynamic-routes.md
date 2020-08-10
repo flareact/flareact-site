@@ -4,9 +4,7 @@ Often times, your app pages will need to be created dynamically.
 
 Similar to page-pased routes, Flareact allows you to define **dynamic routes** using React components defined in files.
 
-To define a dynamic route, create a page wrapped by square brackets `[]`, e.g. `[slug].js`.
-
-_Coming soon: Access dynamic route query params with the `useRouter` hook_.
+To define a dynamic route, create a file with a name wrapped by square brackets `[]`, e.g. `/pages/[slug].js`.
 
 ## Dynamic Routes with `getEdgeProps`
 
@@ -48,3 +46,5 @@ The params passed to your `getEdgeProps` function will contain each dynamic path
   }
 }
 ```
+
+_Coming soon: Access dynamic route query params with the `useRouter` hook_.

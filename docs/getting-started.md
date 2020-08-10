@@ -44,7 +44,6 @@ npm install flareact
 Next, make sure you have the following files (check out the [template repo](https://github.com/flareact/flareact-template) to see the contents of each):
 
 - `index.js`
-- `webpack.config.js`
 - `wrangler.toml`
 
 Open `package.json` file and add the following `scripts`:

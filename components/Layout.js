@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-screen flex flex-col">
       <nav className="flex items-center h-16 px-6 fixed inset-x-0 top-0 z-20 border-b bg-white justify-between">
         <Link href="/">
           <a>
@@ -18,6 +18,7 @@ export default function Layout({ children }) {
         </Link>
         <div>
           <button className="md:hidden" onClick={() => setOpen(!open)}>
+            <span className="sr-only">Open Menu</span>
             <Menu className="fill-current w-6 h-6" />
           </button>
         </div>

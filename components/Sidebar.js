@@ -13,6 +13,7 @@ export default function Sidebar({ hidden, onClick }) {
         <ul onClick={onClick}>
           <NavLink href="/docs/getting-started">Getting Started</NavLink>
           <NavLink href="/docs/pages">Pages</NavLink>
+          <NavLink href="/docs/data-fetching">Data Fetching</NavLink>
         </ul>
       </div>
     </aside>

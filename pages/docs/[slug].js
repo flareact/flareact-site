@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout";
 import Head from "flareact/head";
 
-export async function getStaticProps({ params }) {
+export async function getEdgeProps({ params }) {
   const { slug } = params;
   const doc = await import(`../../docs/${slug}.md`);
 

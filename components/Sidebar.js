@@ -26,11 +26,17 @@ export default function Sidebar({ hidden, onClick }) {
           <NavLink href="/docs/deployment">Deployment</NavLink>
           <NavLink href="/docs/custom-app-page">Custom App Page</NavLink>
           <NavLink href="/docs/custom-postcss-config">
-            Custom PostCSS Page
+            Custom PostCSS Config
           </NavLink>
           <NavLink href="/docs/custom-webpack-config">
-            Custom Webpack Page
+            Custom Webpack Config
           </NavLink>
+          <NavLink href="/docs/comparison-to-nextjs">
+            Comparison to Next.js
+          </NavLink>
+          <NavLink href="/docs/flareact-link">flareact/link</NavLink>
+          <NavLink href="/docs/flareact-head">flareact/head</NavLink>
+          <NavLink href="/docs/flareact-router">useRouter</NavLink>
         </ul>
       </div>
     </aside>

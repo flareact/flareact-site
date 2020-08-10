@@ -42,7 +42,8 @@ The params passed to your `getEdgeProps` function will contain each dynamic path
 ```js
 {
   params: {
-    category, slug;
+    category,
+    slug,
   }
 }
 ```

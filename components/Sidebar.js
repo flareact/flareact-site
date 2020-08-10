@@ -14,6 +14,23 @@ export default function Sidebar({ hidden, onClick }) {
           <NavLink href="/docs/getting-started">Getting Started</NavLink>
           <NavLink href="/docs/pages">Pages</NavLink>
           <NavLink href="/docs/data-fetching">Data Fetching</NavLink>
+          <NavLink href="/docs/dynamic-routes">Dynamic Routes</NavLink>
+          <NavLink href="/docs/api-routes">API Routes</NavLink>
+          <NavLink href="/docs/built-in-css-support">
+            Built-in CSS Support
+          </NavLink>
+          <NavLink href="/docs/static-file-serving">
+            Static File Serving
+          </NavLink>
+          <NavLink href="/docs/fast-refresh">Fast Refresh</NavLink>
+          <NavLink href="/docs/deployment">Deployment</NavLink>
+          <NavLink href="/docs/custom-app-page">Custom App Page</NavLink>
+          <NavLink href="/docs/custom-postcss-config">
+            Custom PostCSS Page
+          </NavLink>
+          <NavLink href="/docs/custom-webpack-config">
+            Custom Webpack Page
+          </NavLink>
         </ul>
       </div>
     </aside>

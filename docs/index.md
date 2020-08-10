@@ -35,3 +35,9 @@ Right — *another* React framework. Here's why Flareact might be useful to you
 ## About
 
 Flareact is an experiment created by [Josh Larson](https://www.jplhomer.org/) in August 2020.
+
+Lots of inspiration and thanks to:
+
+- [Next.js](https://nextjs.org) (obviously)
+- [SWR](https://swr.vercel.app/) for this site's design inspiration
+- [Tailwind](https://tailwindcss.com) for the styles

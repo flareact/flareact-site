@@ -3,6 +3,7 @@ import Link from "flareact/link";
 import Logo from "./Logo";
 import Menu from "./icons/Menu";
 import { useState } from "react";
+import GitHub from "./icons/GitHub";
 
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,14 @@ export default function Layout({ children }) {
             <Logo className="fill-current w-32 h-12 block" />
           </a>
         </Link>
-        <div>
+        <div className="flex">
+          <a
+            className="block mr-3 md:mr-0"
+            href="https://github.com/flareact/flareact"
+          >
+            <span className="sr-only">Open Flareact on GitHub</span>
+            <GitHub className="block w-6 h-6 fill-current" />
+          </a>
           <button className="md:hidden" onClick={() => setOpen(!open)}>
             <span className="sr-only">Open Menu</span>
             <Menu className="fill-current w-6 h-6" />

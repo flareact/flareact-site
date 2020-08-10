@@ -21,3 +21,7 @@ export default function About() {
 The above page will be served at `site.com/about`.
 
 Next step: Read the [getting started guide](/docs/getting-started).
+
+## About
+
+Flareact is an experiment created by [Josh Larson](https://www.jplhomer.org/) in August 2020.

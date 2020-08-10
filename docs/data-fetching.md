@@ -43,5 +43,7 @@ A couple things to note about `getEdgeProps`:
 
 - The code you write will **always run on the edge** in a Worker context. This means it will _never_ run client-side in the browser.
 - In a worker context, **you DO NOT have access to the filesystem**. This means anything that references the Node.js `fs` module will throw errors.
+- You can only define `getEdgeProps` for page components living in your `/pages` directory - not for any other components living elsewhere.
+- Transitioning from Next.js? `getStaticProps` is aliased to `getEdgeProps`, so you don't need to make any changes!
 
 _Coming soon: Caching using the Cloudflare Cache API and revalidation options._

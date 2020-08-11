@@ -14,9 +14,11 @@ Next.js offers three distinct ways to render your pages:
 - **Server-Side Rendering (SSR)**: Your pages are generated on-demand with each request with `getServerProps`. This is less common, given the powerful tool of incremental SSG above.
 - **Client-Side Rendering (CSR)**: If you don't need to have your data fetched as part of your initial HTML payload, you can fetch it within your component as a typical AJAX request.
 
-Flareact offers a similar approach:
+Flareact offers a similar approach with **Edge-Side Rendering (ESR)**:
 
-- **Edge-Side Rendering (ESR)**: Your pages are generated on-demand with each request with `getEdgeProps`. Optionally, the pages can be cached at the edge using the [Cloudflare Worker Cache](https://developers.cloudflare.com/workers/reference/apis/cache/)<sup>\*</sup>, essentially being served as statically-generated pages. They can also be revalidated on a timed basis<sup>\*</sup>, behaving similarly to incremental SSG.
+- Your pages are generated with `getEdgeProps` and cached using the [Cloudflare Worker Cache](https://developers.cloudflare.com/workers/reference/apis/cache/) by default at the edge, similar to **SSG**.
+- Optionally, your pages can be revalidated after a specified time, similar to **incremental SSG**.
+- If want, pages can also be revalidated on every single request, similar to **SSR**.
 - **Client-Side Rendering (CSR)**: If you don't need to have your data fetched as part of your initial HTML payload, you can fetch it within your component as a typical AJAX request.
 
-<sup>\*</sup>_Coming soon_
+[Learn more about data fetching in Flareact](/docs/data-fetching)

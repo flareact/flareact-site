@@ -15,3 +15,5 @@ export default function About() {
 Flareact supports pages with dynamic routes.
 
 **Example**: If you create `pages/posts/[slug].js`, then it will be accessible at `posts/my-first-post`, `posts/another-update`, etc.
+
+[Learn more about Dynamic Routes](/docs/dynamic-routes)

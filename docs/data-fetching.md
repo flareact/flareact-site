@@ -76,6 +76,8 @@ To recap:
 | `0`                | Never cache                                        |
 | `1` (or greater)   | Cache that number of seconds, and then revalidate. |
 
+**Note**: In development, props are requested each page load, and no caching is performed.
+
 ## Additional Notes
 
 A couple things to note about `getEdgeProps`:

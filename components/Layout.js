@@ -10,11 +10,11 @@ export default function Layout({ children }) {
 
   return (
     <div className="h-screen flex flex-col">
-      <nav className="flex items-center h-16 px-6 fixed inset-x-0 top-0 z-20 border-b bg-white justify-between">
+      <nav className="flex items-center h-16 px-6 fixed inset-x-0 top-0 z-20 border-b justify-between bg-gray-100">
         <Link href="/">
           <a>
             <span className="sr-only">Flareact</span>
-            <Logo className="fill-current w-32 h-12 block" />
+            <Logo className="fill-current w-32 h-10 block" />
           </a>
         </Link>
         <div className="flex">

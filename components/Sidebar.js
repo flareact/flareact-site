@@ -4,7 +4,7 @@ import { useRouter } from "flareact";
 export default function Sidebar({ hidden, onClick }) {
   return (
     <aside
-      className={`h-screen bg-white flex-shrink-0 w-full md:w-64 md:border-r md:block fixed md:sticky z-10 ${
+      className={`h-full bg-white flex-shrink-0 w-full md:w-64 md:border-r md:block fixed md:sticky z-10 ${
         hidden ? "hidden" : ""
       }`}
       style={{ top: "4rem", height: "calc(100vh - 4rem)" }}
@@ -52,7 +52,7 @@ function NavLink({ href, children }) {
     <li>
       <Link href={href}>
         <a
-          className={`p-2 hover:bg-gray-200 block ${
+          className={`p-2 hover:bg-orange-100 block ${
             active ? "font-bold text-gray-800" : "text-gray-600"
           }`}
         >

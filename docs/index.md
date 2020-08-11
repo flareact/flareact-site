@@ -32,6 +32,10 @@ Right — *another* React framework. Here's why Flareact might be useful to you
 - **Infinitely scalable**: Don't worry about scaling up servers or getting hit with steep service provider fees. Cloudflare's network is built to handle huge amounts of traffic with a predictable pricing model. Plus, by caching your page data at the edge with an optional invalidation strategy, you can host dynamic content as if it were a statically-generated site.
 - **Familiar API**: Next.js did the hard work to create a great developer experience (DX) for creating and maintaining modern React applications. Flareact borrows many patterns from Next.js, so you'll feel right at home developing your Flareact site.
 
+## Examples
+
+- [Flareact Docs (this site)](https://github.com/flareact/flareact-site/)
+
 ## About
 
 Flareact is an experiment created by [Josh Larson](https://www.jplhomer.org/) in August 2020.

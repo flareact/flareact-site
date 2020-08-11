@@ -35,6 +35,7 @@ Right — *another* React framework. Here's why Flareact might be useful to you
 ## Examples
 
 - [Flareact Docs (this site)](https://github.com/flareact/flareact-site/)
+- [Headless CMS: WordPress](https://github.com/flareact/flareact/tree/master/examples/with-cms-wordpress)
 
 ## About
 

@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "flareact dev",
+    "build": "flareact build",
     "deploy": "flareact publish",
     "lint": "eslint --ext .js",
     "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\""

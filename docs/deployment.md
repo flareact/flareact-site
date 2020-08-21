@@ -25,3 +25,5 @@ At this point, you'll also be required to include a `zone_id`. If you don't want
 CF_ZONE_ID=<your zone ID>
 CF_ACCOUNT_ID=<your account ID>
 ```
+
+**Note:**: Per the [Cloudflare Docs](https://developers.cloudflare.com/workers/learning/getting-started#6d-configuring-your-project), if your route is configured to a hostname, you will need to add a DNS record to Cloudflare to ensure that the hostname can be resolved externally. If your Worker acts as your origin (the response comes directly from a Worker), you should enter a placeholder (dummy) AAAA record pointing to `100::`, which is the [reserved IPv6 discard prefixOpen external link](https://tools.ietf.org/html/rfc6666).

@@ -51,6 +51,7 @@ Open `package.json` file and add the following `scripts`:
 ```json
 "scripts": {
   "dev": "flareact dev",
+  "build": "flareact build",
   "deploy": "flareact publish"
 }
 ```
@@ -58,6 +59,7 @@ Open `package.json` file and add the following `scripts`:
 These scripts refer to the different stages of developing an application:
 
 - `dev` - Runs `flareact dev` which kicks off `wrangler dev` and `flareact` in development mode
+- `build` - Runs `flareact build` which kicks creates a production client-side bundle (useful for deploying from CI)
 - `deploy` - Runs `flareact publish` which builds your application and runs `wrangler publish` to deploy it
 
 Flareact uses the concept of pages. A page is a React Component exported from a `.js` file in the `pages` directory.

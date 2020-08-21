@@ -27,3 +27,37 @@ CF_ACCOUNT_ID=<your account ID>
 ```
 
 **Note:**: Per the [Cloudflare Docs](https://developers.cloudflare.com/workers/learning/getting-started#6d-configuring-your-project), if your route is configured to a hostname, you will need to add a DNS record to Cloudflare to ensure that the hostname can be resolved externally. If your Worker acts as your origin (the response comes directly from a Worker), you should enter a placeholder (dummy) AAAA record pointing to `100::`, which is the [reserved IPv6 discard prefixOpen external link](https://tools.ietf.org/html/rfc6666).
+
+## Deploying from GitHub Actions
+
+To deploy from GitHub Actions, you can use the [wrangler action](https://github.com/cloudflare/wrangler-action).
+
+In your project, create a `.github/workflows/deploy.yml` file:
+
+```yaml
+name: Deploy
+on:
+  - push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn install
+      - run: yarn build
+      - name: Publish
+        uses: cloudflare/wrangler-action@1.2.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          IS_WORKER: true
+```
+
+Optionally update your `push:` directive to include only certain branches.
+
+You also might want to add a `CF_ZONE_ID` if you're deploying to a custom domain.

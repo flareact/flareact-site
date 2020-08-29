@@ -9,3 +9,7 @@ webpack_config = "node_modules/flareact/webpack"
 [site]
 bucket = "out"
 entry-point = "./"
+
+[env.staging]
+name = "flareact-site-staging"
+workers_dev = true

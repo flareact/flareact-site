@@ -27,8 +27,9 @@ export default function Doc({ content }) {
   useEffect(() => {
     function handleClick(e) {
       e.preventDefault();
+      const { pathname } = new URL(e.target.href);
 
-      router.push(e.target.href);
+      router.push("/docs/[slug]", pathname);
     }
 
     if (!container) return;

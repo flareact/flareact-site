@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout";
 import Head from "flareact/head";
 import { useEffect, useRef } from "react";
-import { useRouter } from "flareact";
+import { useRouter } from "flareact/router";
 
 export async function getEdgeProps({ params }) {
   const { slug } = params;

@@ -1,5 +1,5 @@
 import Link from "flareact/link";
-import { useRouter } from "flareact";
+import { useRouter } from "flareact/router";
 
 export default function Sidebar({ hidden, onClick }) {
   return (

@@ -1,7 +1,7 @@
 import Layout from "../../components/Layout";
 import Head from "flareact/head";
 import { useEffect, useRef } from "react";
-import { useRouter } from "flareact";
+import { useRouter } from "flareact/router";
 
 export async function getEdgeProps({ params }) {
   const { slug } = params;
@@ -27,8 +27,9 @@ export default function Doc({ content }) {
   useEffect(() => {
     function handleClick(e) {
       e.preventDefault();
+      const { pathname } = new URL(e.target.href);
 
-      router.push(e.target.href);
+      router.push("/docs/[slug]", pathname);
     }
 
     if (!container) return;

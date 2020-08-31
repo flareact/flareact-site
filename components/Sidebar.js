@@ -1,5 +1,5 @@
 import Link from "flareact/link";
-import { useRouter } from "flareact";
+import { useRouter } from "flareact/router";
 
 export default function Sidebar({ hidden, onClick }) {
   return (
@@ -44,13 +44,13 @@ export default function Sidebar({ hidden, onClick }) {
 }
 
 function NavLink({ href, children }) {
-  const { pathname } = useRouter();
+  const { asPath } = useRouter();
 
-  const active = pathname == href;
+  const active = asPath == href;
 
   return (
     <li>
-      <Link href={href}>
+      <Link href="/docs/[slug]" as={href}>
         <a
           className={`p-2 hover:bg-orange-100 block ${
             active ? "font-bold text-gray-800" : "text-gray-600"

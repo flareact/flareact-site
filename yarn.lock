@@ -3337,10 +3337,10 @@ findup-sync@^3.0.0:
     micromatch "^3.0.4"
     resolve-dir "^1.0.1"
 
-flareact@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.1.0.tgz#67803b5b0524fdac495acf5e569ae0fd227e18cf"
-  integrity sha512-9gF8jz8rmJFKRWiCgdN1GDAd/5rgMSnnw0dUZ2LWAt7DyASvsIYDzAL/ZyS0Sx/dVcryU13DeYyW5Bm8/qxkqA==
+flareact@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.4.0.tgz#12f5cf72e76b6bfff94dde1397d03bacb038482d"
+  integrity sha512-u3XYO6odcZTk8/OvtHKHA7cpBIL7uEoERe3cKfjMPpQTo++azHfSokEC5VGUj1JGKka592wIxkYIzJwdaxqn2g==
   dependencies:
     "@babel/core" "^7.11.0"
     "@babel/plugin-transform-runtime" "^7.11.0"
@@ -3355,7 +3355,9 @@ flareact@^0.1.0:
     copy-webpack-plugin "^5"
     css-loader "^4.2.1"
     dotenv "^8.2.0"
+    glob "^7.1.6"
     mini-css-extract-plugin "^0.9.0"
+    mitt "^2.1.0"
     nanoid "^3.1.12"
     optimize-css-assets-webpack-plugin "^5.0.3"
     postcss-flexbugs-fixes "^4.2.1"
@@ -3535,7 +3537,7 @@ glob-parent@^5.0.0, glob-parent@~5.1.0:
   dependencies:
     is-glob "^4.0.1"
 
-glob@^7.0.0, glob@^7.0.3, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
+glob@^7.0.0, glob@^7.0.3, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
   integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
@@ -4886,6 +4888,11 @@ mississippi@^3.0.0:
     pumpify "^1.3.3"
     stream-each "^1.1.0"
     through2 "^2.0.0"
+
+mitt@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/mitt/-/mitt-2.1.0.tgz#f740577c23176c6205b121b2973514eade1b2230"
+  integrity sha512-ILj2TpLiysu2wkBbWjAmww7TkZb65aiQO+DkVdUTBpBXq+MHYiETENkKFMtsJZX1Lf4pe4QOrTSjIfUwN5lRdg==
 
 mixin-deep@^1.2.0:
   version "1.3.2"

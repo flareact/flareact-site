@@ -13,5 +13,8 @@ export default function Index() {
 
   // Navigate to the /about page
   router.push("/about");
+
+  // Navigate to the dynamic route /posts/[slug] using `href`, `as`
+  router.push("/posts/[slug]", "/posts/my-first-post");
 }
 ```

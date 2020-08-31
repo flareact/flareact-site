@@ -3,7 +3,7 @@
 Flareact provides access to the `router` instance using the `useRouter()` hook:
 
 ```js
-import { useRouter } from "flareact";
+import { useRouter } from "flareact/router";
 
 export default function Index() {
   const router = useRouter();

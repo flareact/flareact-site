@@ -3337,10 +3337,10 @@ findup-sync@^3.0.0:
     micromatch "^3.0.4"
     resolve-dir "^1.0.1"
 
-flareact@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.3.2.tgz#d096af9f347907f7cca8bbb8943543fd7ba3dff1"
-  integrity sha512-Ukri0wH73h3b6dHc5H9YonieIcqOsybLWmLAi7/i1l+j4V95lSkTREgd+NGKSaoBGMN2QTFcCYVgwGQiXgQNQA==
+flareact@^0.4.0-canary.1:
+  version "0.4.0-canary.1"
+  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.4.0-canary.1.tgz#37f31ceacd141633a9019535413fae69459067ec"
+  integrity sha512-KxnICjhXm/oajUaxI8Sa4kClKlLXnUCnd9p1WpCZi7OE9MQjvr+W/BttsdNQqTN4xScHBG9D405650HcQOAuBg==
   dependencies:
     "@babel/core" "^7.11.0"
     "@babel/plugin-transform-runtime" "^7.11.0"

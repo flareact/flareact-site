@@ -14,10 +14,10 @@ Otherwise, follow the instructions below to get started.
 
 ## Installation
 
-Make sure you have the [wrangler CLI](https://github.com/cloudflare/wrangler) tool installed, and that you're using the **latest beta** (to support `wrangler dev`):
+Make sure you have the [wrangler CLI](https://github.com/cloudflare/wrangler) tool installed:
 
 ```bash
-npm i @cloudflare/wrangler@beta -g
+npm i @cloudflare/wrangler -g
 ```
 
 You may need to run `wrangler login` to authenticate your Cloudflare account.

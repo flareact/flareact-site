@@ -3337,10 +3337,10 @@ findup-sync@^3.0.0:
     micromatch "^3.0.4"
     resolve-dir "^1.0.1"
 
-flareact@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.4.1.tgz#61ccad7da4aa74a0cd93626fcec112e26e7718e7"
-  integrity sha512-DNKH5t0CjGmqgBIxijWL+tFtNdAxA1E1kL/nLsEi5d3oS4NlKSc03LZyXOV/r4NHxfpEZhGbukZRKzl9uD/UvA==
+flareact@^0.5.0-canary.1:
+  version "0.5.0-canary.1"
+  resolved "https://registry.yarnpkg.com/flareact/-/flareact-0.5.0-canary.1.tgz#4dc313adead9e70aadfd14fec68c6d05cb14d9a6"
+  integrity sha512-HfJGxtWHTZCDJAqs59ATC11bPEBaOkzEpWvXuwXkB3qhYMdCcoADwzEiV3C7fynR8WVe/SJZpgg4h3VikCzhvQ==
   dependencies:
     "@babel/core" "^7.11.0"
     "@babel/plugin-transform-runtime" "^7.11.0"
@@ -3371,6 +3371,7 @@ flareact@^0.4.1:
     webpack-cli "^3.3.12"
     webpack-dev-server "^3.11.0"
     webpack-merge "^5.1.1"
+    webpack-sources "^1.4.3"
 
 flat-cache@^2.0.1:
   version "2.0.1"

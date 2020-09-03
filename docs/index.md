@@ -48,3 +48,4 @@ Lots of inspiration and thanks to:
 - [Next.js](https://nextjs.org) (obviously)
 - [SWR](https://swr.vercel.app/) for this site's design inspiration
 - [Tailwind](https://tailwindcss.com) for the styles
+- [Kari Linder](https://twitter.com/kkblinder) from Cloudflare for the logo 🔥

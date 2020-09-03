@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         <Link href="/">
           <a>
             <span className="sr-only">Flareact</span>
-            <Logo className="fill-current w-32 h-10 block" />
+            <Logo className="fill-current w-40 h-10 block -mt-2" />
           </a>
         </Link>
         <div className="flex">

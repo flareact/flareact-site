@@ -1,7 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  purge: ["./components/**/*.js", "./pages/**/*.js", "./flareact.config.js"],
   plugins: [require("@tailwindcss/typography")],
   theme: {
     extend: {

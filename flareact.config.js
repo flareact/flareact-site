@@ -13,6 +13,10 @@ marked.setOptions({
 
 const renderer = new marked.Renderer();
 renderer.heading = (text, level) => {
+  if (level === 1) {
+    return `<h1>${text}</h1>`;
+  }
+
   const escapedText = text.toLowerCase().replace(/[^\w]+/g, "-");
 
   return `

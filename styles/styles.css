@@ -1,5 +1,15 @@
 @tailwind base;
 
+.anchor-link {
+  text-decoration: none !important;
+}
+
+.subnav-anchor {
+  margin-top: -84px;
+  width: 1px;
+  @apply absolute inline-block;
+}
+
 @tailwind components;
 
 @tailwind utilities;

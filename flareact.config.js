@@ -12,6 +12,18 @@ marked.setOptions({
 });
 
 const renderer = new marked.Renderer();
+renderer.heading = (text, level) => {
+  const escapedText = text.toLowerCase().replace(/[^\w]+/g, "-");
+
+  return `
+    <h${level} class="group">
+      <span class="subnav-anchor" id="${escapedText}"></span>
+      ${text}
+      <a class="anchor-link" href="#${escapedText}">
+        <span class="group-hover:opacity-100 opacity-0 text-gray-600" aria-hidden="true">#</span>
+      </a>
+    </h${level}>`;
+};
 
 module.exports = {
   webpack: function (config) {

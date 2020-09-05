@@ -10,4 +10,7 @@ module.exports = {
       },
     },
   },
+  variants: {
+    opacity: ["responsive", "hover", "focus", "group-hover"],
+  },
 };

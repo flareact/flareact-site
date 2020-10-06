@@ -2,7 +2,7 @@
 
 Often times, your app pages will need to be created dynamically.
 
-Similar to page-pased routes, Flareact allows you to define **dynamic routes** using React components defined in files.
+Similar to page-based routes, Flareact allows you to define **dynamic routes** using React components defined in files.
 
 To define a dynamic route, create a file with a name wrapped by square brackets `[]`, e.g. `/pages/[slug].js`.
 

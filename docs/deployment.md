@@ -28,6 +28,24 @@ CF_ACCOUNT_ID=<your account ID>
 
 **Note:**: Per the [Cloudflare Docs](https://developers.cloudflare.com/workers/learning/getting-started#6d-configuring-your-project), if your route is configured to a hostname, you will need to add a DNS record to Cloudflare to ensure that the hostname can be resolved externally. If your Worker acts as your origin (the response comes directly from a Worker), you should enter a placeholder (dummy) AAAA record pointing to `100::`, which is the [reserved IPv6 discard prefixOpen external link](https://tools.ietf.org/html/rfc6666).
 
+## Deploying to environments
+
+Cloudflare allows you to [define additional environments](https://developers.cloudflare.com/workers/platform/environments) for your Workers site.
+
+After adding a new environment to your `wrangler.toml` file:
+
+```toml
+[env.staging]
+name = "your-site-staging"
+workers_dev = true
+```
+
+You can pass the `--env <NAME>` flag to the `yarn deploy` command:
+
+```bash
+yarn deploy --env staging
+```
+
 ## Deploying from GitHub Actions
 
 To deploy from GitHub Actions, you can use the [wrangler action](https://github.com/cloudflare/wrangler-action).

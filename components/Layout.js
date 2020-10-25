@@ -19,7 +19,9 @@ export default function Layout({ children }) {
           </a>
         </Link>
         <div className="flex items-center">
-          <DocsSearchInput />
+          <div className="hidden md:block">
+            <DocsSearchInput />
+          </div>
           <a
             className="block mr-3 md:mr-0"
             href="https://github.com/flareact/flareact"

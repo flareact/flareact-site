@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
-    "flareact": "^0.6.0-canary.3",
+    "flareact": "^0.7.0-canary.3",
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

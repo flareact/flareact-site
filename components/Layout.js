@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import Menu from "./icons/Menu";
 import { useState } from "react";
 import GitHub from "./icons/GitHub";
+import DocsSearchInput from "./DocsSearchInput";
 
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
@@ -17,7 +18,8 @@ export default function Layout({ children }) {
             <Logo className="fill-current w-40 h-10 block -mt-2" />
           </a>
         </Link>
-        <div className="flex">
+        <div className="flex items-center">
+          <DocsSearchInput />
           <a
             className="block mr-3 md:mr-0"
             href="https://github.com/flareact/flareact"

@@ -48,4 +48,12 @@ The params passed to your `getEdgeProps` function will contain each dynamic path
 }
 ```
 
-_Coming soon: Access dynamic route query params with the `useRouter` hook_.
+You can also reference the query params with the `useRouter` hook in your component:
+
+```js
+function Post() {
+  const router = useRouter();
+
+  const { category, slug } = router.query;
+}
+```

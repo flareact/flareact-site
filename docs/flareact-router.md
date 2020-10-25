@@ -1,4 +1,4 @@
-# useRouter
+# flareact/router
 
 Flareact provides access to the `router` instance using the `useRouter()` hook:
 
@@ -10,6 +10,12 @@ export default function Index() {
 
   // Inspect the pathname
   router.pathname;
+
+  // Inspect the asPath
+  router.asPath;
+
+  // Inspect the query and params
+  router.query;
 
   // Navigate to the /about page
   router.push("/about");

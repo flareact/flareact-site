@@ -36,7 +36,7 @@ export default function Sidebar({ hidden, onClick }) {
           </NavLink>
           <NavLink href="/docs/flareact-link">flareact/link</NavLink>
           <NavLink href="/docs/flareact-head">flareact/head</NavLink>
-          <NavLink href="/docs/flareact-router">useRouter</NavLink>
+          <NavLink href="/docs/flareact-router">flareact/router</NavLink>
         </ul>
       </div>
     </aside>

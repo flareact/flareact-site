@@ -1,17 +1,11 @@
 import Layout from "../components/Layout";
-// import Content from "../docs/index.md";
 import Head from "flareact/head";
-import fetch from "node-fetch";
-import marked from "marked";
+import { getDocs } from "../lib/docs";
 
 export async function getEdgeProps() {
-  const markdown = await fetch(
-    `https://raw.githubusercontent.com/flareact/flareact/main/docs/index.md`
-  );
-
   return {
     props: {
-      content: marked(await markdown.text()),
+      content: await getDocs("index"),
     },
     revalidate: 60,
   };

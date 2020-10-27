@@ -2,15 +2,16 @@ import Layout from "../../components/Layout";
 import Head from "flareact/head";
 import { useEffect, useRef } from "react";
 import { useRouter } from "flareact/router";
+import { getDocs } from "../../lib/docs";
 
 export async function getEdgeProps({ params }) {
   const { slug } = params;
-  const doc = await import(`../../docs/${slug}.md`);
 
   return {
     props: {
-      content: doc.default,
+      content: await getDocs(slug),
     },
+    revalidate: 60,
   };
 }
 

@@ -13,8 +13,11 @@
     "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\""
   },
   "dependencies": {
+    "@octokit/rest": "^18.0.6",
     "@tailwindcss/typography": "^0.2.0",
     "flareact": "^0.7.0-canary.3",
+    "marked": "^1.2.2",
+    "node-fetch": "^2.6.1",
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

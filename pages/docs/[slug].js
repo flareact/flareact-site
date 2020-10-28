@@ -11,7 +11,7 @@ export async function getEdgeProps({ params }) {
     props: {
       content: await getDocs(slug),
     },
-    revalidate: 60,
+    revalidate: 60 * 5,
   };
 }
 

@@ -7,7 +7,7 @@ export async function getEdgeProps() {
     props: {
       content: await getDocs("index"),
     },
-    revalidate: 60,
+    revalidate: 60 * 5,
   };
 }
 

@@ -1,8 +1,17 @@
 import Layout from "../components/Layout";
-import Content from "../docs/index.md";
 import Head from "flareact/head";
+import { getDocs } from "../lib/docs";
 
-export default function Index() {
+export async function getEdgeProps() {
+  return {
+    props: {
+      content: await getDocs("index"),
+    },
+    revalidate: 60 * 5,
+  };
+}
+
+export default function Index({ content }) {
   return (
     <Layout>
       <Head>
@@ -14,7 +23,7 @@ export default function Index() {
           content="Flareact is an edge-rendered React framework built for Cloudflare Workers. It features file-based page routing with dynamic page paths and edge-side data fetching APIs."
         />
       </Head>
-      <div className="prose" dangerouslySetInnerHTML={{ __html: Content }} />
+      <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
     </Layout>
   );
 }

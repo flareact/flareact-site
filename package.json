@@ -16,7 +16,6 @@
     "@tailwindcss/typography": "^0.2.0",
     "flareact": "^0.8.0-canary.2",
     "marked": "^1.2.2",
-    "node-fetch": "^2.6.1",
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

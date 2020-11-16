@@ -24,6 +24,7 @@ export default function Sidebar({ hidden, onClick }) {
           </NavLink>
           <NavLink href="/docs/fast-refresh">Fast Refresh</NavLink>
           <NavLink href="/docs/deployment">Deployment</NavLink>
+          <NavLink href="/docs/typescript">TypeScript</NavLink>
           <NavLink href="/docs/custom-app-page">Custom App Page</NavLink>
           <NavLink href="/docs/custom-postcss-config">
             Custom PostCSS Config

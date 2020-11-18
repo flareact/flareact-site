@@ -1,5 +1,5 @@
 import "../styles/styles.css";
-import "../styles/syntax.css";
+import "../styles/prism.css";
 import Head from "flareact/head";
 
 export default function App({ Component, pageProps }) {

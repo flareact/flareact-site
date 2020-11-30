@@ -1,19 +1,25 @@
 import Layout from "../components/Layout";
 import Head from "flareact/head";
-import { getDocs } from "../lib/docs";
+import { getDocs, getDocsManifest } from "../lib/docs";
 
 export async function getEdgeProps() {
+  const [content, manifest] = await Promise.all([
+    getDocs("index"),
+    getDocsManifest(),
+  ]);
+
   return {
     props: {
-      content: await getDocs("index"),
+      content,
+      manifest,
     },
     revalidate: 60 * 5,
   };
 }
 
-export default function Index({ content }) {
+export default function Index({ content, manifest }) {
   return (
-    <Layout>
+    <Layout docs={manifest}>
       <Head>
         <title>
           Flareact - Edge-Rendered React Framework built for Cloudflare Workers

@@ -6,7 +6,7 @@ import { useState } from "react";
 import GitHub from "./icons/GitHub";
 import DocsSearchInput from "./DocsSearchInput";
 
-export default function Layout({ children }) {
+export default function Layout({ children, docs }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -36,7 +36,7 @@ export default function Layout({ children }) {
         </div>
       </nav>
       <div className="flex flex-1 h-full">
-        <Sidebar hidden={!open} onClick={() => setOpen(false)} />
+        <Sidebar docs={docs} hidden={!open} onClick={() => setOpen(false)} />
         <article className="relative pt-24 pb-16 px-6 md:px-8 w-full max-w-full overflow-x-hidden xl:pr-64">
           <main className="max-w-screen-md mx-auto">{children}</main>
         </article>

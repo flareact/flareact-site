@@ -2,20 +2,26 @@ import Layout from "../../components/Layout";
 import Head from "flareact/head";
 import { useEffect, useRef } from "react";
 import { useRouter } from "flareact/router";
-import { getDocs } from "../../lib/docs";
+import { getDocs, getDocsManifest } from "../../lib/docs";
 
 export async function getEdgeProps({ params }) {
   const { slug } = params;
 
+  const [content, manifest] = await Promise.all([
+    getDocs(slug),
+    getDocsManifest(),
+  ]);
+
   return {
     props: {
-      content: await getDocs(slug),
+      content,
+      manifest,
     },
     revalidate: 60 * 5,
   };
 }
 
-export default function Doc({ content }) {
+export default function Doc({ content, manifest }) {
   // TODO: Find a better way to extract title
   const title = `Flareact - ${
     content.match(/<h1.*>(.+)<\/h1>/)?.[1] || "Docs"
@@ -44,7 +50,7 @@ export default function Doc({ content }) {
   }, []);
 
   return (
-    <Layout>
+    <Layout docs={manifest}>
       <Head>
         <title>{title}</title>
       </Head>

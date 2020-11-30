@@ -15,8 +15,8 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
     "flareact": "^0.10.1-canary.1",
+    "highlight.js": "^10.3.2",
     "marked": "^1.2.2",
-    "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "tailwindcss": "^1.6.2"

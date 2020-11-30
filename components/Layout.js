@@ -10,7 +10,7 @@ export default function Layout({ children, docs }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <nav className="flex items-center h-16 px-6 fixed inset-x-0 top-0 z-20 border-b justify-between bg-gray-100">
         <Link href="/">
           <a>

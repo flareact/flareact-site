@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0",
-    "flareact": "^0.10.1-canary.2",
+    "flareact": "^1.0.0-canary.4",
     "highlight.js": "^10.3.2",
     "marked": "^1.2.2",
     "react": "^16.13.1",

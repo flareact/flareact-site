@@ -56,7 +56,7 @@ export default function Doc({ content, manifest }) {
       </Head>
       <div
         ref={container}
-        className="prose"
+        className="prose dark:prose-dark"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </Layout>

@@ -48,7 +48,7 @@ export default function DocsSearchInput() {
 
   return (
     <input
-      className="py-2 px-3 appearance-none placeholder-gray-500 mr-2 border rounded focus:outline-none text-gray-700 focus:shadow-outline"
+      className="py-2 px-3 appearance-none placeholder-gray-500 mr-2 border rounded focus:outline-none text-gray-700 focus:ring dark:bg-gray-600 dark:placeholder-white dark:text-white"
       id="docs-search"
       placeholder={`Search ("/" to focus)`}
       type="search"

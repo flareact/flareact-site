@@ -29,7 +29,10 @@ export default function Index({ content, manifest }) {
           content="Flareact is an edge-rendered React framework built for Cloudflare Workers. It features file-based page routing with dynamic page paths and edge-side data fetching APIs."
         />
       </Head>
-      <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
+      <div
+        className="prose dark:prose-dark"
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
     </Layout>
   );
 }

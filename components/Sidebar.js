@@ -4,13 +4,16 @@ import { useRouter } from "flareact/router";
 export default function Sidebar({ docs = [], hidden, onClick }) {
   return (
     <aside
-      className={`h-full bg-white flex-shrink-0 w-full md:w-64 md:border-r md:block fixed md:sticky z-10 dark:bg-gray-900 dark:text-white md:dark:border-gray-600 ${
+      className={`h-full bg-black inset-0 flex-none w-full fixed md:w-64 md:block bg-opacity-25 lg:bg-white lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block ${
         hidden ? "hidden" : ""
       }`}
-      style={{ top: "4rem", height: "calc(100vh - 4rem)" }}
     >
-      <div className="w-full h-full p-4 pb-40 md:mb-16 overflow-y-auto">
-        <ul onClick={onClick}>
+      <div className="h-full pb-40 bg-white mr-24 overflow-hidden overflow-y-auto scrolling-touch lg:h-auto lg:block lg:sticky lg:bg-transparent lg:top-16 lg:mr-0">
+        <FadeyBaby />
+        <ul
+          className="px-1 pt-6 overflow-y-auto font-medium text-base sm:px-3 xl:px-5 lg:text-sm pb-10 lg:pt-10 lg:pb-16 lg:h-(screen-16)"
+          onClick={onClick}
+        >
           {docs.map(({ url, title }) => (
             <NavLink key={url} href={url}>
               {title}
@@ -31,15 +34,24 @@ function NavLink({ href, children }) {
     <li>
       <Link href="/docs/[slug]" as={href}>
         <a
-          className={`p-2 hover:bg-yellow-100 dark:hover:bg-yellow-700 block ${
+          className={`p-2 transition-colors duration-200 rounded block ${
             active
-              ? "font-bold text-gray-800 dark:text-white"
-              : "text-gray-600 dark:text-gray-100"
+              ? "font-bold dark:text-white bg-gradient-to-r from-yellow-200 to-yellow-300 text-yellow-700"
+              : "dark:text-gray-100 hover:text-gray-900 "
           }`}
         >
           {children}
         </a>
       </Link>
     </li>
+  );
+}
+
+/**
+ * Cheers, tailwindcss.com
+ */
+function FadeyBaby() {
+  return (
+    <div className="hidden lg:block h-12 pointer-events-none absolute inset-x-0 z-10 bg-gradient-to-b from-white"></div>
   );
 }

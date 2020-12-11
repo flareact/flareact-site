@@ -6,13 +6,19 @@ export default function Layout({ children, docs }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col dark:bg-gray-900 dark:text-gray-50">
+    <div className="text-gray-500 dark:bg-gray-900 dark:text-gray-50">
       <Header onOpen={() => setOpen(!open)} />
-      <div className="flex flex-1 h-full">
-        <Sidebar docs={docs} hidden={!open} onClick={() => setOpen(false)} />
-        <article className="relative pt-24 pb-16 px-6 md:px-8 w-full max-w-full overflow-x-hidden xl:pr-64">
-          <main className="max-w-screen-md mx-auto">{children}</main>
-        </article>
+      <div className="max-w-8xl w-full mx-auto">
+        <div className="lg:flex">
+          <Sidebar docs={docs} hidden={!open} onClick={() => setOpen(false)} />
+          <article className="min-w-0 w-full flex-auto lg:static lg:max-h-full lg:overflow-visible">
+            <div className="mt-10 pb-24 lg:pb-16 w-full flex">
+              <main className="min-w-0 flex-auto px-4 sm:px-6 lg:px-8">
+                {children}
+              </main>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   );

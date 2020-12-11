@@ -4,10 +4,10 @@ module.exports = {
       test: /\.md$/,
       use: [
         {
-          loader: "html-loader",
-        },
-        {
-          loader: "markdown-loader",
+          loader: "frontmatter-markdown-loader",
+          options: {
+            mode: ["body"],
+          },
         },
       ],
     });

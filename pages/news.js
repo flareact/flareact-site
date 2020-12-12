@@ -24,7 +24,7 @@ export async function getEdgeProps() {
 export default function News({ posts }) {
   return (
     <PageLayout>
-      <div className="relative max-w-lg mx-auto lg:max-w-2xl mt-10">
+      <div className="relative max-w-lg mx-auto lg:max-w-2xl">
         <div className="text-center">
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-gray-200 sm:text-4xl">
             Flareact News
@@ -46,7 +46,7 @@ export default function News({ posts }) {
                   <p className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                     {post.title}
                   </p>
-                  <p className="mt-3 text-base text-gray-500 md:text-gray-300">
+                  <p className="mt-3 text-base text-gray-500 dark:text-gray-300">
                     {post.excerpt}
                   </p>
                 </a>

@@ -8,7 +8,7 @@ export default function BaseLayout({ children }) {
       <div className="text-gray-500 dark:bg-gray-900 dark:text-gray-50 min-h-screen">
         <Header />
         <HamburgerMenu />
-        <div className="max-w-8xl w-full mx-auto">{children}</div>
+        <Container>{children}</Container>
       </div>
     </LayoutProvider>
   );
@@ -25,5 +25,19 @@ function HamburgerMenu() {
       <span className="sr-only">Open Menu</span>
       <Menu className="fill-current w-6 h-6 absolute top-1/2 left-1/2 -mt-3 -ml-3" />
     </button>
+  );
+}
+
+function Container({ children }) {
+  const { open } = useLayout();
+
+  return (
+    <div
+      className={`max-w-8xl w-full mx-auto ${
+        open ? "overflow-hidden max-h-screen fixed" : ""
+      }`}
+    >
+      {children}
+    </div>
   );
 }

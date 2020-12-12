@@ -24,13 +24,13 @@ export async function getEdgeProps() {
 export default function News({ posts }) {
   return (
     <PageLayout>
-      <div className="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl">
-        <div>
-          <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-            News
+      <div className="relative max-w-lg mx-auto lg:max-w-2xl mt-10">
+        <div className="text-center">
+          <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-gray-200 sm:text-4xl">
+            Flareact News
           </h2>
-          <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
-            <p className="text-xl text-gray-500">
+          <div className="mt-3 sm:mt-4">
+            <p className="text-xl text-gray-500 dark:text-gray-300">
               The latest on Flareact news, releases, development and more.
             </p>
           </div>
@@ -38,19 +38,22 @@ export default function News({ posts }) {
         <div className="mt-6 pt-10 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
           {posts.map((post) => (
             <div key={post.slug}>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500 dark:text-gray-300">
                 <time dateTime={post.date}>{post.date}</time>
               </p>
               <Link href="/news/[slug]" as={`/news/${post.slug}`}>
                 <a className="mt-2 block">
-                  <p className="text-xl font-semibold text-gray-900">
+                  <p className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                     {post.title}
+                  </p>
+                  <p className="mt-3 text-base text-gray-500 md:text-gray-300">
+                    {post.excerpt}
                   </p>
                 </a>
               </Link>
               <div className="mt-3">
                 <Link href="/news/[slug]" as={`/news/${post.slug}`}>
-                  <a className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
+                  <a className="text-base font-semibold text-blue-400 hover:text-blue-600 underline">
                     View post
                   </a>
                 </Link>

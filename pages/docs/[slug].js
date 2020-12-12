@@ -7,7 +7,7 @@ import { getDocs, getDocsManifest } from "../../lib/docs";
 export async function getEdgeProps({ params }) {
   const { slug } = params;
 
-  const [content, manifest] = await Promise.all([
+  const [{ markdown: content, subheadings }, manifest] = await Promise.all([
     getDocs(slug),
     getDocsManifest(),
   ]);
@@ -15,13 +15,14 @@ export async function getEdgeProps({ params }) {
   return {
     props: {
       content,
+      subheadings,
       manifest,
     },
     revalidate: 60 * 5,
   };
 }
 
-export default function Doc({ content, manifest }) {
+export default function Doc({ content, subheadings, manifest }) {
   // TODO: Find a better way to extract title
   const title = `Flareact - ${
     content.match(/<h1.*>(.+)<\/h1>/)?.[1] || "Docs"
@@ -50,7 +51,7 @@ export default function Doc({ content, manifest }) {
   }, []);
 
   return (
-    <Layout docs={manifest}>
+    <Layout docs={manifest} subheadings={subheadings}>
       <Head>
         <title>{title}</title>
       </Head>

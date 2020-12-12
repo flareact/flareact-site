@@ -3,7 +3,7 @@ import Head from "flareact/head";
 import { getDocs, getDocsManifest } from "../lib/docs";
 
 export async function getEdgeProps() {
-  const [content, manifest] = await Promise.all([
+  const [{ markdown: content }, manifest] = await Promise.all([
     getDocs("index"),
     getDocsManifest(),
   ]);

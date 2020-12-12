@@ -1,5 +1,6 @@
 import "../styles/styles.css";
 import "../styles/syntax.css";
+import "../styles/docsearch.css";
 import Head from "flareact/head";
 
 export default function App({ Component, pageProps }) {

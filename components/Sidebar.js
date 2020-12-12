@@ -68,8 +68,11 @@ function SubNav({ url, subheadings }) {
       {subheadings.map((heading) => (
         <li key={heading}>
           <Link
-            href="/docs[slug]"
-            as={`${url}#${heading.toLowerCase().replaceAll(/[ </>]/g, "-")}`}
+            href="/docs/[slug]"
+            as={`${url}#${heading
+              .toLowerCase()
+              .replace(/[ </>]/g, "-")
+              .replace(/--/g, "-")}`}
           >
             <a className="py-1 block hover:text-gray-700 transition-colors duration-200">
               {stripTags(heading)}
@@ -95,8 +98,5 @@ function asPathIsActive(asPath, url) {
 }
 
 function stripTags(string) {
-  let el = document.createElement("div");
-  el.innerHTML = string;
-
-  return el.innerText;
+  return string.replace(/(<([^>]+)>)/gi, "");
 }

@@ -1,7 +1,13 @@
 import Link from "flareact/link";
 import { useRouter } from "flareact/router";
+import { useLayout } from "../lib/use-layout";
 
-export default function Sidebar({ docs = [], hidden, onClick }) {
+export default function Sidebar({ docs = [] }) {
+  const { open, setOpen } = useLayout();
+  const hidden = !open;
+
+  const onClick = () => setOpen(false);
+
   return (
     <aside
       className={`h-full bg-black inset-0 flex-none w-full fixed bg-opacity-25 lg:bg-white lg:dark:bg-gray-900 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block ${

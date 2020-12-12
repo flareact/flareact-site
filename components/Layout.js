@@ -4,7 +4,7 @@ import { useLayout } from "../lib/use-layout";
 
 export default function Layout({ children, docs }) {
   return (
-    <BaseLayout>
+    <BaseLayout hasSidebar={true}>
       <div className="lg:flex">
         <Sidebar docs={docs} />
         <Container>

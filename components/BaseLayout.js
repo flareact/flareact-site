@@ -2,12 +2,12 @@ import { LayoutProvider, useLayout } from "../lib/use-layout";
 import Header from "./Header";
 import Menu from "./icons/Menu";
 
-export default function BaseLayout({ children }) {
+export default function BaseLayout({ children, hasSidebar }) {
   return (
     <LayoutProvider>
       <div className="text-gray-500 dark:bg-gray-900 dark:text-gray-50 min-h-screen">
         <Header />
-        <HamburgerMenu />
+        {hasSidebar && <HamburgerMenu />}
         <div className="max-w-8xl w-full mx-auto">{children}</div>
       </div>
     </LayoutProvider>

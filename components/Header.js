@@ -8,7 +8,7 @@ export default function Header() {
     <nav className="flex sticky max-w-8xl mx-auto w-full top-0 z-40 lg:z-50 bg-white dark:bg-gray-900 dark:text-white">
       <div className="flex-none pl-4 flex items-center lg:w-60 xl:w-72 xl:pl-8 pr-4 border-b border-gray-200 dark:border-gray-700">
         <Link href="/">
-          <a className="w-6 md:w-auto overflow-hidden block -mt-2">
+          <a className="w-6 md:w-auto overflow-hidden block -mt-2 text-black dark:text-white">
             <span className="sr-only">Flareact</span>
             <Logo className="fill-current w-auto h-8" />
           </a>

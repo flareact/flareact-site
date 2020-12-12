@@ -10,11 +10,16 @@ export default function Sidebar({ docs = [] }) {
 
   return (
     <aside
-      className={`h-full bg-black inset-0 flex-none w-full fixed bg-opacity-25 lg:bg-white lg:dark:bg-gray-900 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block ${
+      className={`h-full bg-black inset-0 flex-none w-full fixed z-40 bg-opacity-25 lg:bg-white lg:dark:bg-gray-900 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block ${
         hidden ? "hidden" : ""
       }`}
+      onClick={() => {
+        if (!open) return;
+
+        setOpen(false);
+      }}
     >
-      <div className="h-full pb-40 bg-white dark:bg-gray-900 mr-24 overflow-hidden overflow-y-auto scrolling-touch lg:h-auto lg:block lg:sticky lg:bg-transparent lg:top-16 lg:mr-0">
+      <div className="h-full bg-white dark:bg-gray-900 mr-24 overflow-hidden overflow-y-auto scrolling-touch lg:h-auto lg:block lg:sticky lg:bg-transparent lg:top-16 lg:mr-0">
         <FadeyBaby />
         <ul
           className="px-1 pt-6 overflow-y-auto font-medium text-base sm:px-3 xl:px-5 lg:text-sm pb-10 lg:pt-10 lg:pb-16 lg:h-(screen-16)"

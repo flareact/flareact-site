@@ -5,7 +5,7 @@ import DocsSearchInput from "./DocsSearchInput";
 
 export default function Header() {
   return (
-    <nav className="flex sticky max-w-8xl mx-auto w-full top-0 lg:z-50 bg-white dark:bg-gray-900 dark:text-white">
+    <nav className="flex sticky max-w-8xl mx-auto w-full top-0 z-40 lg:z-50 bg-white dark:bg-gray-900 dark:text-white">
       <div className="flex-none pl-4 flex items-center lg:w-60 xl:w-72 xl:pl-8 mr-4">
         <Link href="/">
           <a className="w-6 md:w-auto overflow-hidden block -mt-2">

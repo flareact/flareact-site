@@ -396,9 +396,9 @@
   padding-top: 2.5rem;
   padding-bottom: 1rem;
 
-  @variants dark {
+  /* @variants dark {
     color: theme("colors.gray.100");
-  }
+  } */
 }
 
 .DocSearch-StartScreen .DocSearch-Help {

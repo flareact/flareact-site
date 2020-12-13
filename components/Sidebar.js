@@ -74,7 +74,7 @@ function SubNav({ url, subheadings }) {
               .replace(/[ </>]/g, "-")
               .replace(/--/g, "-")}`}
           >
-            <a className="py-1 block hover:text-gray-700 transition-colors duration-200">
+            <a className="py-1 block hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200">
               {stripTags(heading)}
             </a>
           </Link>

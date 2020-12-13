@@ -13,15 +13,20 @@
     "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\""
   },
   "dependencies": {
+    "@docsearch/react": "^1.0.0-alpha.14",
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.1.0",
-    "flareact": "^1.0.0-canary.6",
+    "date-fns": "^2.16.1",
+    "flareact": "^1.0.0-canary.8",
+    "frontmatter-markdown-loader": "^3.6.2",
     "highlight.js": "^10.3.2",
     "marked": "^1.2.2",
     "postcss": "^8.2.0",
+    "raw-loader": "^4.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "tailwindcss": "^2.0.1"
+    "tailwindcss": "^2.0.1",
+    "yaml": "^1.10.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

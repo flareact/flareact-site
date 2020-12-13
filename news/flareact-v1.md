@@ -17,6 +17,12 @@ This release includes:
 - [Navigation anchor link improvements](#navigation-anchor-link-improvements)
 - [Upgrade to the latest PostCSS](#upgrade-to-the-latest-postcss)
 
+You can upgrade existing projects right away:
+
+```bash
+yarn add flareact react react-dom
+```
+
 ## TypeScript Support
 
 TypeScript support is here!

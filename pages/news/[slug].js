@@ -4,6 +4,7 @@ import useMarkdownClicks from "../../lib/use-markdown-clicks";
 import { format } from "date-fns";
 import { postDate } from "../../lib/dates";
 import { atRule } from "postcss";
+import { Seo } from "../../components/Seo";
 
 export async function getEdgeProps({ params }) {
   const { slug } = params;
@@ -25,6 +26,11 @@ export default function NewsItem({ attributes, content }) {
 
   return (
     <PageLayout>
+      <Seo
+        description={attributes.excerpt}
+        title={attributes.title}
+        image={attributes.image}
+      />
       <article
         className="relative max-w-lg mx-auto lg:max-w-4xl"
         ref={container}

@@ -1,4 +1,5 @@
 import Link from "flareact/link";
+import Head from "flareact/head";
 import PageLayout from "../components/PageLayout";
 import { postDate } from "../lib/dates";
 
@@ -25,6 +26,9 @@ export async function getEdgeProps() {
 export default function News({ posts }) {
   return (
     <PageLayout>
+      <Head>
+        <title>Flareact News</title>
+      </Head>
       <div className="relative max-w-lg mx-auto lg:max-w-2xl">
         <div className="text-center">
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 dark:text-gray-200 sm:text-4xl">

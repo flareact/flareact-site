@@ -59,8 +59,6 @@ export default function Index({ message }: IndexProps) {
 
 Read more about [TypeScript in the docs](/docs/typescript).
 
-Thanks to `@christian-schlab` for the [PR](christian-schab)!
-
 ## Support for Sass styling out of the box
 
 A lot of people use Sass. Previously, if you wanted to use Sass with a Flareact app, you had to add a [custom Webpack config](/docs/custom-webpack-config) in `flareact.config.js` and install a `sass-loader`.
@@ -81,8 +79,6 @@ No more! You can now write `.scss` files in you Flareact app with zero additiona
 // pages/_app.js
 import "../styles/app.scss";
 ```
-
-That's it. Thanks to `@cj` for this [PR](https://github.com/flareact/flareact/pull/63).
 
 ## Support for CSS Modules out of the box
 
@@ -167,5 +163,7 @@ When you click on a Flareact `<Link>` component, your page will be scrolled to t
 Flareact now uses PostCSS v8 under the hood. This means it's compatible with TailwindCSS v2. I'm not sure if this breaks anything, but you've been warned.
 
 ---
+
+Thanks to `@christian-schlab`, `@SparklingFun`, `@cj`, and anyone else who contributed to this release!
 
 There's a lot more to come in future releases 🤠 stay tuned!

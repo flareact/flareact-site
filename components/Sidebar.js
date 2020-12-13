@@ -31,7 +31,7 @@ export default function Sidebar({ docs = [], subheadings = [] }) {
               <li key={url}>
                 <NavLink href={url}>{title}</NavLink>
                 {Boolean(asPathIsActive(asPath, url) && subheadings.length) && (
-                  <SubNav url={url} subheadings={subheadings} />
+                  <SubNav subheadings={subheadings} />
                 )}
               </li>
             );
@@ -62,22 +62,23 @@ function NavLink({ href, children }) {
   );
 }
 
-function SubNav({ url, subheadings }) {
+function SubNav({ subheadings }) {
   return (
     <ul className="py-2 pl-4 text-sm text-gray-400">
       {subheadings.map((heading) => (
         <li key={heading}>
-          <Link
-            href="/docs/[slug]"
-            as={`${url}#${heading
-              .toLowerCase()
-              .replace(/[ </>]/g, "-")
-              .replace(/--/g, "-")}`}
+          <a
+            href={
+              "#" +
+              heading
+                .toLowerCase()
+                .replace(/[ </>]/g, "-")
+                .replace(/--/g, "-")
+            }
+            className="py-1 block hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200"
           >
-            <a className="py-1 block hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200">
-              {stripTags(heading)}
-            </a>
-          </Link>
+            {stripTags(heading)}
+          </a>
         </li>
       ))}
     </ul>

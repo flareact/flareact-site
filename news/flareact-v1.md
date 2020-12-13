@@ -2,6 +2,7 @@
 date: 2020-12-12
 title: Flareact v1.0
 excerpt: Flareact v1.0 is here with TypeScript support, Sass and CSS Modules support out-of-the-box, caching improvements, and more.
+image: "/images/flareact-v1.jpg"
 ---
 
 Flareact v1.0 has been [released](https://github.com/flareact/flareact/releases/tag/v1.0.0)! We've come a long way since Flareact was introduced as an experimental project in August 2020.

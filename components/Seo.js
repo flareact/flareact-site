@@ -20,9 +20,9 @@ export function Seo({ title, description, image }) {
       )}
       {image && (
         <Head>
-          <meta name="image" property="og:image" content={image} />
-          <meta name="og:image" content={image} />
-          <meta name="twitter:image" content={image} />
+          <meta name="image" property="og:image" content={absoluteUrl(image)} />
+          <meta name="og:image" content={absoluteUrl(image)} />
+          <meta name="twitter:image" content={absoluteUrl(image)} />
         </Head>
       )}
       <Head>
@@ -31,7 +31,7 @@ export function Seo({ title, description, image }) {
         <meta name="twitter:creator" content="@jplhomer" />
         <meta
           property="og:url"
-          content={`https://flareact.com${router.pathname}`}
+          content={`https://flareact.com${router.asPath}`}
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
@@ -39,4 +39,8 @@ export function Seo({ title, description, image }) {
       </Head>
     </>
   );
+}
+
+function absoluteUrl(url) {
+  return url.startsWith("https") ? url : "https://flareact.com" + url;
 }

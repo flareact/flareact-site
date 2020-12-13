@@ -1,11 +1,15 @@
 import PageLayout from "../../components/PageLayout";
 import { renderMarkdown } from "../../lib/markdown";
+import useMarkdownClicks from "../../lib/use-markdown-clicks";
+import { format } from "date-fns";
+import { postDate } from "../../lib/dates";
+import { atRule } from "postcss";
 
 export async function getEdgeProps({ params }) {
   const { slug } = params;
 
   const { default: markdown } = await import(`../../news/${slug}.md`);
-  const content = await renderMarkdown(markdown.body);
+  const { markdown: content } = await renderMarkdown(markdown.body);
 
   return {
     props: {
@@ -17,10 +21,15 @@ export async function getEdgeProps({ params }) {
 }
 
 export default function NewsItem({ attributes, content }) {
+  const { container } = useMarkdownClicks(content);
+
   return (
     <PageLayout>
-      <article className="relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-4xl">
-        <header className="text-center mt-12 space-y-1">
+      <article
+        className="relative max-w-lg mx-auto lg:max-w-4xl"
+        ref={container}
+      >
+        <header className="text-center space-y-1 pt-10">
           <div>
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight md:text-5xl pb-4 text-gray-900 dark:text-gray-100">
               {attributes.title}
@@ -29,15 +38,17 @@ export default function NewsItem({ attributes, content }) {
           <dl className="space-y-10 pb-10">
             <div>
               <dt className="sr-only">Published on</dt>
-              <dd className="text-base leading-6 font-medium text-gray-500">
-                <time dateTime={attributes.date}>{attributes.date}</time>
+              <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-200">
+                <time dateTime={attributes.date}>
+                  {postDate(attributes.date)}
+                </time>
               </dd>
             </div>
           </dl>
         </header>
         <main className="pt-10">
           <div
-            className="prose dark:prose-dark"
+            className="prose dark:prose-dark mx-auto"
             dangerouslySetInnerHTML={{ __html: content }}
           ></div>
         </main>

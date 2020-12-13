@@ -1,5 +1,6 @@
 import Link from "flareact/link";
 import PageLayout from "../components/PageLayout";
+import { postDate } from "../lib/dates";
 
 export async function getEdgeProps() {
   const context = require.context("../news/", true, /\.md$/);
@@ -39,7 +40,7 @@ export default function News({ posts }) {
           {posts.map((post) => (
             <div key={post.slug}>
               <p className="text-sm text-gray-500 dark:text-gray-300">
-                <time dateTime={post.date}>{post.date}</time>
+                <time dateTime={post.date}>{postDate(post.date)}</time>
               </p>
               <Link href="/news/[slug]" as={`/news/${post.slug}`}>
                 <a className="mt-2 block">

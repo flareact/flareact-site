@@ -1,5 +1,5 @@
 ---
-date: 2020-12-12
+date: "2020-12-12T16:37:53.438Z"
 title: Flareact v1.0
 excerpt: Flareact v1.0 is here with TypeScript support, Sass and CSS Modules support out-of-the-box, caching improvements, and more.
 image: "/images/flareact-v1.jpg"

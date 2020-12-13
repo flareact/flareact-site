@@ -17,7 +17,7 @@
     "@tailwindcss/typography": "^0.3.1",
     "autoprefixer": "^10.1.0",
     "date-fns": "^2.16.1",
-    "flareact": "^1.0.0-canary.8",
+    "flareact": "^1.0.1-canary.1",
     "frontmatter-markdown-loader": "^3.6.2",
     "highlight.js": "^10.3.2",
     "marked": "^1.2.2",

@@ -59,6 +59,10 @@
   border-radius: 1rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   background: white;
+
+  @variants dark {
+    background: black;
+  }
 }
 
 .DocSearch-SearchBar {
@@ -69,6 +73,10 @@
   display: flex;
   align-items: center;
   margin: 0 1.5rem;
+
+  @variants dark {
+    border-color: theme("colors.gray.600");
+  }
 }
 
 .DocSearch-Form {
@@ -113,6 +121,10 @@
   margin-right: 1rem;
   flex: auto;
   min-width: 0;
+
+  @variants dark {
+    color: white;
+  }
 }
 
 .DocSearch-Input:focus {
@@ -160,6 +172,10 @@
   color: theme("colors.gray.600");
   margin-top: 1.5rem;
   margin-bottom: 1rem;
+
+  @variants dark {
+    color: theme("colors.gray.200");
+  }
 }
 
 .DocSearch-Hit-Container {
@@ -180,6 +196,10 @@
 .DocSearch-Hit-icon path {
   stroke-width: 2px;
   stroke: #71717a;
+
+  @variants dark {
+    stroke: theme("colors.gray.300");
+  }
 }
 
 .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-icon path {
@@ -198,6 +218,10 @@
   line-height: 1rem;
   font-weight: 500;
   color: theme("colors.gray.500");
+
+  @variants dark {
+    color: theme("colors.gray.300");
+  }
 }
 
 .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-path {
@@ -211,6 +235,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  @variants dark {
+    color: theme("colors.gray.50");
+  }
 }
 
 .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-title {
@@ -249,6 +277,10 @@
   border-radius: 0.5rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   padding: 0 1.25rem 0 1rem;
+
+  @variants dark {
+    background: theme("colors.gray.700");
+  }
 }
 
 .DocSearch-Hit[aria-selected="true"] > a {

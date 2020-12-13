@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Head from "flareact/head";
 import { getDocs, getDocsManifest } from "../lib/docs";
+import useMarkdownClicks from "../lib/use-markdown-clicks";
 
 export async function getEdgeProps() {
   const [{ markdown: content }, manifest] = await Promise.all([
@@ -18,6 +19,8 @@ export async function getEdgeProps() {
 }
 
 export default function Index({ content, manifest }) {
+  const { container } = useMarkdownClicks(content);
+
   return (
     <Layout docs={manifest}>
       <Head>
@@ -30,6 +33,7 @@ export default function Index({ content, manifest }) {
         />
       </Head>
       <div
+        ref={container}
         className="prose dark:prose-dark"
         dangerouslySetInnerHTML={{ __html: content }}
       />

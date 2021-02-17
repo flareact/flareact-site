@@ -36,6 +36,7 @@ export function Seo({ title, description, image }) {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Flareact" />
+        <link rel="canonical" href={`https://flareact.com${router.asPath}`} />
       </Head>
     </>
   );

@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
+  mode: "jit",
   purge: ["./components/**/*.js", "./pages/**/*.js", "./flareact.config.js"],
   darkMode: "media",
   plugins: [require("@tailwindcss/typography")],

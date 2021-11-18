@@ -116,8 +116,8 @@ export default function DocsSearchInput() {
             }}
             onClose={onClose}
             indexName="flareact"
-            apiKey="450e58b4ff73372d228a59a6eab57613"
-            appId="BH4D9OD16A"
+            apiKey="0568a23c9e1a694bfc16cc09bdff7ff4"
+            appId="I8H280NFES"
             navigator={{
               navigate({ suggestionUrl }) {
                 setIsOpen(false);
